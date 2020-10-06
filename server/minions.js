@@ -1,7 +1,6 @@
-const express = require('express');
-const minionsRouter = express.Router();
+const minionsRouter = require('express').Router();
 
-module.export = minionsRouter;
+module.exports = minionsRouter;
 
 const {
     getAllFromDatabase,
@@ -12,7 +11,7 @@ const {
 } = require ('./db');
 
 minionsRouter.param('minionId', (req, res, next, id) => {
-    const minion = getFromDatabaseById('minions', req.body);
+    const minion = getFromDatabaseById('minions', id);
     if (minion) {
         req.minion = minion;
         next();
