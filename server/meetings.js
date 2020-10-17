@@ -1,7 +1,6 @@
-const express = require('express');
-const meetingsRouter = express.Router();
+const meetingsRouter = require('express').Router();
 
-module.export = meetingsRouter;
+module.exports = meetingsRouter;
 
 const {
     createMeeting,
