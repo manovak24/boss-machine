@@ -11,6 +11,7 @@ export const formatCash = num => {
   return `$${numberWithCommas}`;
 };
 
+
 export const isMillionDollarIdea = (weeklyRevenue, numWeeks) => {
   const totalMoney = Number(numWeeks) * Number(weeklyRevenue);
   if (!numWeeks || !weeklyRevenue || isNaN(totalMoney) || totalMoney < 1000000) {
